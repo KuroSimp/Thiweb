@@ -1,0 +1,175 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.025' fill-rule='evenodd'%3E%3Cpath d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+    /* Default body background color is set by Tailwind class 'bg-secondary' in HTML */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section {
+    /* Red gradient overlay */
+    background-image: linear-gradient(rgba(216, 46, 47, 0.85), rgba(216, 46, 47, 0.75)), url('banner.jpg'); /* Make sure banner.jpg exists or use a placeholder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #D82E2F; /* primary color - red */
+    border: 3px solid white;
+    z-index: 1;
+}
+
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #FADBD8; /* Lighter red (e.g., Tailwind red-200 equivalent) */
+}
+
+.member-card, .event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.member-card {
+    border: 1px solid transparent;
+}
+
+.event-card {
+     border-width: 1px; /* Ensured by Tailwind class border, can be removed if default border is fine */
+}
+
+.member-card:hover, .event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(216, 46, 47, 0.25); /* Reddish shadow */
+    border-color: #D82E2F; /* Primary color for border - red */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #D82E2F !important; /* primary color - red, !important to override Tailwind focus */
+    box-shadow: 0 0 0 2px rgba(216, 46, 47, 0.3) !important; /* Focus ring - red tint, !important */
+}
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D82E2F; /* primary - red */
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.custom-checkbox:checked {
+    background-color: #D82E2F; /* primary - red */
+    border-color: #D82E2F; /* primary - red */
+}
+
+.custom-checkbox:checked::after {
+    content: '\2714';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Add this if you want specific error styling for checkbox border via JS */
+.custom-checkbox.border-red-500 {
+    border-color: #ef4444 !important; /* Tailwind's red-500 */
+}
+
+
+.decorated-underline {
+    width: 70px;
+    height: 3px;
+    background-color: #D82E2F; /* primary color - red */
+    margin: 8px auto 0;
+    position: relative;
+    border-radius: 2px;
+}
+
+.decorated-underline::before,
+.decorated-underline::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #D82E2F; /* primary color - red */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.decorated-underline::before {
+    left: -18px;
+}
+
+.decorated-underline::after {
+    right: -18px;
+}
+
+.footer-patterned {
+    background-image:
+        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05)),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05));
+    background-size: 16px 16px;
+}
+
+.lantern {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Scrollbar (optional, themed) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FEF9E7; /* secondary (light gold) */
+}
+::-webkit-scrollbar-thumb {
+    background: #F1C40F; /* accent (gold) */
+    border-radius: 10px;
+    border: 2px solid #FEF9E7; /* secondary (light gold) */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D82E2F; /* primary (red) */
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F1C40F #FEF9E7; /* accent (gold) thumb, secondary (light gold) track */
+}
+
+/* Mobile Menu Specific Styles */
+#mobile-menu .mobile-menu-content { /* Target the sliding panel */
+    transition: transform 0.3s ease-in-out;
+}
