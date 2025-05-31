@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIT - Câu Lạc Bộ Công Nghệ Thông Tin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a9ed8',
+                        secondary: '#e6f0fa',
+                    },
+                    borderRadius: {
+                        'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px',
+                        'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="lantern w-10 h-10 mr-2 md:mr-3">
+                <img src="https://readdy.ai/api/search-image?query=Traditional%20Vietnamese%20lantern%2C%20red%20and%20gold%20colors%2C%20festive%20decoration%2C%20detailed%20ornaments%2C%20transparent%20background%2C%20vector%20style%20illustration&width=200&height=200&seq=lantern1&orientation=squarish" alt="Lồng đèn" class="w-full h-full object-contain">
+            </div>
+            <a href="#" class="flex items-center nav-link-home">
+                <img src="Logo BIT.png" alt="BIT Club Logo" class="h-9 md:h-10">
+            </a>
+            
+            <a href="#" class="flex items-center ml-2 md:ml-3"> 
+                <img src="2020-Btec.png" alt="Logo BTEC" class="h-9 md:h-10"> 
+            </a>
+            
+        </div>
+        <div class="flex items-center">
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link">Giới thiệu</a>
+                <a href="#achievements" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link">Thành tựu</a>
+                <a href="#events" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link event-trigger">Sự kiện</a>
+                <a href="#members" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link">Thành viên</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link">Liên hệ</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <div class="main-content-wrapper">
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero-section w-full relative overflow-hidden main-page-section scroll-animate">
+            <div id="hero-slides" class="absolute inset-0 w-full h-full">
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                     style="background-image: url('https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/480942819_122228791328025902_3221871569693023322_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeERobQfC5r2H1p7IjQoNWE4JKotLMngWNAkqi0syeBY0Ag4QGnDqSgPe2xjUeSzMvI1LuSpWtFPAqjvdZbq9zP8&_nc_ohc=jqoFql97nS8Q7kNvwGi0mXC&_nc_oc=AdkZMXYN_l7n7NQhBfZAdv3W78jYWhuWSoOQrQHmOSi7-auZPd8fXmJLsB2FrYaqrVw&_nc_zt=23&_nc_ht=scontent.fhan17-1.fna&_nc_gid=tsD-dbxxgIE3lpQee5flfg&oh=00_AfI-ukhlZeouGQ7lTDPUZS625YTSIvlHvvYZ-DgRSbfInQ&oe=683A243D');">
+                </div>
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                     style="background-image: url('https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/481261140_122228791076025902_8724561416935259860_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFk_PvmpZrDd72iRaQ84w2WE7V13_BYYQATtXXf8FhhALAvrJ_wtMmAqaSopydV0sEJpsaDsQ4RgiEoTdtsn59R&_nc_ohc=9hkOa8zujkYQ7kNvwG9hg0w&_nc_oc=AdlG_QqTsq2I_MtdjarCvwhzX4aBizabHzNcaEYPjWR2qbxGRr5VnwbPdG5uGh841K4&_nc_zt=23&_nc_ht=scontent.fhan17-1.fna&_nc_gid=L28TplTuQKCsXWf3N87mEw&oh=00_AfLMAXrLjcRuF2ynBtG_7MjeZrgHMOdNfSPSwAKJD2Chuw&oe=683A40D7');">
+                </div>
+                <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"
+                     style="background-image: url('https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/500265523_122246578706025902_4139272108008325901_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFTa8P8Ns50Xw_2pnZLe9riB_FfAngz2AkH8V8CeDPYCY8a8No4U9w9DqIn-5PGBobEeNY_-7YZdfPUyxdjV82-&_nc_ohc=p23KEQhr3YgQ7kNvwFgQHX1&_nc_oc=AdncMSrPYDILmuDyP5HK4YLMGxQMcAWG05iaTtpJQBVCT4vfv0ar75wyHGdeWj0Tb_o&_nc_zt=23&_nc_ht=scontent.fhan17-1.fna&_nc_gid=P_Pup3I5s_Qp2ejUqxSPkQ&oh=00_AfI6NRVW8Voo84dvf1xT5qX9D2cu-H8y7m1tixKNrNb4jA&oe=683A2F50');">
+                </div>
+            </div>
+            <div class="absolute inset-0 w-full h-full" style="background-image: linear-gradient(rgba(85, 177, 238, 0.75)); z-index: 1;"></div>
+            <div class="container mx-auto px-4 py-24 md:py-32 flex flex-col items-start relative" style="z-index: 2;">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Câu Lạc Bộ Công Nghệ Thông Tin BIT</h1>
+                    <p class="text-xl text-white mb-8">Kết nối truyền thống với công nghệ, tạo nên tươngLai</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#about" class="bg-white text-primary hover:bg-opacity-80 px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap nav-link">Tìm hiểu thêm</a>
+                        <a href="#contact" class="bg-primary text-white hover:bg-blue-600 px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap nav-link">Tham gia ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white main-page-section scroll-animate">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Giới Thiệu Về BIT</h2>
+                    
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://readdy.ai/api/search-image?query=Vietnamese%2520students%2520in%2520a%2520modern%2520IT%2520club%2520environment%252C%2520working%2520together%2520on%2520computers%252C%2520collaborative%2520atmosphere%252C%2520traditional%2520Vietnamese%2520elements%2520in%2520the%2520background%252C%2520blue%2520color%2520scheme%252C%2520high%2520quality%2520professional%2520photo&width=600&height=400&seq=about1&orientation=landscape" alt="Câu lạc bộ BIT" class="rounded-lg shadow-xl w-full h-auto object-cover border-4 border-secondary">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nơi Hội Tụ Đam Mê Công Nghệ</h3>
+                        <p class="text-gray-600 mb-6">Câu lạc bộ Công nghệ thông tin BIT được thành lập vào năm 2015, là nơi quy tụ những sinh viên đam mê công nghệ và mong muốn phát triển kỹ năng chuyên môn trong lĩnh vực IT. Chúng tôi kết hợp giữa giá trị truyền thống Việt Nam với công nghệ hiện đại, tạo nên một môi trường học tập và sáng tạo độc đáo.</p>
+                        <p class="text-gray-600 mb-8">BIT không chỉ là nơi học hỏi kiến thức mà còn là ngôi nhà chung để các thành viên chia sẻ, kết nối và phát triển bản thân. Chúng tôi tổ chức các workshop, hackathon, và dự án thực tế giúp sinh viên trau dồi kỹ năng và chuẩn bị cho tương lai.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div class="text-center"><div class="text-3xl font-bold text-primary mb-2">100+</div><div class="text-gray-600">Thành viên</div></div>
+                            <div class="text-center"><div class="text-3xl font-bold text-primary mb-2">50+</div><div class="text-gray-600">Dự án</div></div>
+                            <div class="text-center"><div class="text-3xl font-bold text-primary mb-2">30+</div><div class="text-gray-600">Sự kiện</div></div>
+                            <div class="text-center"><div class="text-3xl font-bold text-primary mb-2">15+</div><div class="text-gray-600">Giải thưởng</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-16 md:py-24 bg-gray-50 main-page-section scroll-animate">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Thành Tựu & Sự Kiện</h2>
+                    
+                    <p class="text-gray-600 mt-6 max-w-3xl mx-auto">Những dấu mốc quan trọng và thành tựu nổi bật của câu lạc bộ BIT trong hành trình phát triển</p>
+                </div>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute top-0 bottom-0" style="left: 19px; width: 2px; background-color: #d1e3f6; z-index: 0;"></div>
+                    <div style="margin-left: 50px;">
+                        <div class="mb-12 relative timeline-dot">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">2021: Sự khởi đầu</h3>
+                            <p class="text-gray-600 mb-4">Câu lạc bộ BIT được thành lập bởi một nhóm sinh viên CNTT đam mê, những người nhận thấy nhu cầu về một cộng đồng nơi họ có thể khám phá công nghệ ngoài lớp học. Bắt đầu chỉ với 15 thành viên, câu lạc bộ đã tổ chức hội thảo đầu tiên về phát triển web.</p>
+                            <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/480704954_122228389286025902_8870717971897086920_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGbZmar_W3YT5a8XfUxdc8B1lkIlfvhSBPWWQiV--FIE9Uy4YLo6qboameCx6okJQtLSD8Cmk4hFNdLhoJ4h29B&_nc_ohc=f-1EX-havIgQ7kNvwFx8IKc&_nc_oc=Adl8bZcVdxqiUbzVRy6VZtblisSLN_Wb3XijBdinVVdeXhkaXJxJug2TJ--V98rqPfQ&_nc_zt=23&_nc_ht=scontent.fhan2-3.fna&_nc_gid=z_fjKDgNrrwKqQqYZXBFmQ&oh=00_AfLnYw0eHqKu_Gs-JK1WytgpBPqXDZdZcGeaVwNTjTB2Fw&oe=6835F29F" alt="Sự khởi đầu BIT" class="rounded-lg shadow-md mt-3">
+                        </div>
+                        <div class="mb-12 relative timeline-dot">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">2022: Tăng trưởng và được công nhận</h3>
+                            <p class="text-gray-600 mb-4">Câu lạc bộ mở rộng lên 50 thành viên và bắt đầu tổ chức các hội thảo và nói chuyện công nghệ thường xuyên. BIT đã tổ chức cuộc thi hackathon đầu tiên, thu hút những người tham gia từ khắp khuôn viên trường. Câu lạc bộ đã nhận được sự công nhận từ hội học sinh vì những đóng góp cho văn hóa công nghệ trong khuôn viên trường.</p>
+                             <img src="https://scontent.fhan12-1.fna.fbcdn.net/v/t39.30808-6/488962991_122237103854025902_3285121942065844406_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFuYj7ASi6xjDIa9nBlsK4-gpu_P4P2aaCCm78_g_ZpoBH1FrpDx79yWKyNQ728pVvpPJWN-QZ3_KKfXSZ0VWGd&_nc_ohc=XGX9t_XCq7gQ7kNvwF4EV_z&_nc_oc=AdlMtN27oYiiEOIfzCPBHf-59ajqMec31oSsB11wxrXLj0a08jQkgk8bjUPtNlUjASQ&_nc_zt=23&_nc_ht=scontent.fhan12-1.fna&_nc_gid=SNNWPgngQOHyYx6Sx52Ffw&oh=00_AfKAQ84jSHyapbQ7YwpKjQXbfAjUWE8BPJYq2DBR3YB13A&oe=6835E3B7" alt="Tăng trưởng BIT" class="rounded-lg shadow-md mt-3">
+                        </div>
+                        <div class="mb-12 relative timeline-dot">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">2023: Kết nối ngành</h3>
+                            <p class="text-gray-600 mb-4">Câu lạc bộ BIT đã thiết lập quan hệ đối tác với các công ty công nghệ địa phương, tạo cơ hội thực tập cho các thành viên. Câu lạc bộ đã tổ chức sự kiện kết nối đầu tiên trong ngành, quy tụ sinh viên và các chuyên gia. Một chương trình cố vấn đã được đưa ra để hỗ trợ các thành viên có kinh nghiệm.</p>
+                             <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.30808-6/488653358_122237114888025902_1800571743553469853_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHg6wji--oN4dVUA43kkTem7uRy1Ivck3Pu5HLUi9yTc6YQzsK5mRvqERLz57ZvJxloXpG2cQgvOFVG-gOGCD2A&_nc_ohc=vhZjCV6aNpgQ7kNvwEXRF4r&_nc_oc=Adk8cDM76nKAjrj_ab4hLlF8UFWU5DYwVJHQqwvK6UUZUBFpWfpFIneDxSj6HwrCqHM&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=ZGT_Kt0I04zur9oP4ZJ_FA&oh=00_AfK5tbKTsncqzrQPew8elR8vRDe4yDvDI3TuXvPoR2cp_A&oe=6835EB60" alt="Kết nối ngành BIT" class="rounded-lg shadow-md mt-3">
+                        </div>
+                        <div class="mb-12 relative timeline-dot">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">2024: Dự án đổi mới sáng tạo</h3>
+                             <p class="text-gray-600 mb-4">Câu lạc bộ đã khởi xướng các dự án hợp tác giải quyết các vấn đề trong thế giới thực. Các nhóm đã phát triển các giải pháp cho các vấn đề trong khuôn viên trường bằng cách sử dụng công nghệ. Các thành viên của Câu lạc bộ BIT đã đại diện cho trường đại học trong các cuộc thi công nghệ quốc gia, mang về một số giải thưởng.</p>
+                            <img src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/480942819_122228791328025902_3221871569693023322_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeERobQfC5r2H1p7IjQoNWE4JKotLMngWNAkqi0syeBY0Ag4QGnDqSgPe2xjUeSzMvI1LuSpWtFPAqjvdZbq9zP8&_nc_ohc=GfANuPLhf6gQ7kNvwGv4sSE&_nc_oc=AdlrRLRcFmFmiAzlrqyQxgqp2MNaMtjgD9LgFsyFvw0FHcdJYipBxLpHdi19colCFHI&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&_nc_gid=x-FpyuR9e27jPQDRulTs8g&oh=00_AfLq3_sIFRi1NLUdP99utSZCQvkvTDGJkXLutz9eQN3qyA&oe=6835F77D" alt="Dự án đổi mới BIT" class="rounded-lg shadow-md mt-3">
+                        </div>
+                        <div class="relative timeline-dot">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">2025: Ngày nay</h3>
+                            <p class="text-gray-600 mb-4">Ngày nay, BIT Club có hơn 100 thành viên tích cực và tiếp tục phát triển. Với một chương trình toàn diện gồm các hội thảo, dự án, cuộc thi và sự kiện kết nối, câu lạc bộ vẫn cam kết thực hiện sứ mệnh trao quyền cho sinh viên thông qua công nghệ và đổi mới.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section (on homepage) -->
+        <section id="events" class="py-16 md:py-24 bg-white main-page-section scroll-animate">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sự Kiện Sắp Tới</h2>
+                    
+                    <p class="text-gray-600 mt-6 max-w-3xl mx-auto">Đừng bỏ lỡ những sự kiện hấp dẫn sắp diễn ra của câu lạc bộ BIT</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card">
+                        <div class="h-48 overflow-hidden"><img src="https://readdy.ai/api/search-image?query=Vietnamese%2520tech%2520workshop%252C%2520interactive%2520coding%2520session%252C%2520students%2520with%2520laptops%252C%2520blue%2520themed%2520classroom%252C%2520modern%2520learning%2520environment%252C%2520professional%2520educational%2520photo&width=400&height=250&seq=event1&orientation=landscape" alt="Workshop AI" class="w-full h-full object-cover"></div>
+                        <div class="p-6">
+                            <div class="flex items-center text-primary mb-3"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-calendar-line text-xl"></i></div><span class="ml-2 font-medium">21/05/2025</span></div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Workshop "Startup Talk with CEOs"</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">Tiếp cận góc nhìn thực tiễn về mô hình kinh doanh, vận hành doanh nghiệp trẻ và lắng nghe câu chuyện từ các CEO.</p>
+                            <div class="flex items-center text-gray-600 mb-5"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-map-pin-line text-xl"></i></div><span class="ml-2 text-sm">Hội trường D, BTEC</span></div>
+                            <!-- THAY ĐỔI Ở ĐÂY -->
+                            <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm cta-view-event-details" data-event-name="Workshop Startup Talk with CEOs">Đăng ký ngay</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card">
+                        <div class="h-48 overflow-hidden"><img src="https://readdy.ai/api/search-image?query=Vietnamese%2520hackathon%2520event%252C%2520teams%2520working%2520together%252C%2520collaborative%2520coding%252C%2520blue%2520lighting%252C%2520modern%2520co-working%2520space%252C%2520energetic%2520atmosphere%252C%2520professional%2520event%2520photo&width=400&height=250&seq=event2&orientation=landscape" alt="Hackathon 2025" class="w-full h-full object-cover"></div>
+                        <div class="p-6">
+                            <div class="flex items-center text-primary mb-3"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-calendar-line text-xl"></i></div><span class="ml-2 font-medium">13/05 - 15/06/2025</span></div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">HACK <CX> TOGETHER 2025</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">Ứng dụng AI trong ngân hàng, nhận sự hướng dẫn từ chuyên gia fintech và trình bày sản phẩm trước hội thảo lớn.</p>
+                            <div class="flex items-center text-gray-600 mb-5"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-map-pin-line text-xl"></i></div><span class="ml-2 text-sm">Đại học Bách khoa Hà Nội</span></div>
+                            <!-- THAY ĐỔI Ở ĐÂY -->
+                            <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm cta-view-event-details" data-event-name="HACK CX TOGETHER 2025">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card">
+                        <div class="h-48 overflow-hidden"><img src="https://readdy.ai/api/search-image?query=Vietnamese%2520tech%2520recruitment%2520fair%252C%2520company%2520booths%252C%2520students%2520in%2520formal%2520attire%252C%2520blue%2520themed%2520exhibition%2520hall%252C%2520professional%2520networking%2520event%252C%2520corporate%2520atmosphere&width=400&height=250&seq=event3&orientation=landscape" alt="Tech Career Fair" class="w-full h-full object-cover"></div>
+                        <div class="p-6">
+                            <div class="flex items-center text-primary mb-3"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-calendar-line text-xl"></i></div><span class="ml-2 font-medium">03/06/2025</span></div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">JOB FAIR – NGÀY HỘI VIỆC LÀM</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">Ngày hội việc làm công nghệ với hơn 30 doanh nghiệp IT hàng đầu và hàng trăm cơ hội việc làm hấp dẫn.</p>
+                            <div class="flex items-center text-gray-600 mb-5"><div class="w-8 h-8 flex items-center justify-center"><i class="ri-map-pin-line text-xl"></i></div><span class="ml-2 text-sm">Trung tâm Hội nghị Quốc gia</span></div>
+                            <!-- THAY ĐỔI Ở ĐÂY -->
+                            <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm cta-view-event-details" data-event-name="Tech Career Fair 2025">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outstanding Members Section -->
+        <section id="members" class="py-16 md:py-24 bg-gray-50 main-page-section scroll-animate">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Thành Viên Nổi Bật</h2><p class="text-gray-600 mt-6 max-w-3xl mx-auto">Những gương mặt tiêu biểu đã và đang đóng góp tích cực cho sự phát triển của câu lạc bộ BIT</p></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden member-card"><div class="h-64 overflow-hidden"><img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/485955060_122234091956025902_7067972439456597314_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFIAVZxmgQoXYeOGAs8p3fFE5J2EhMaDwkTknYSExoPCZlEUelOPspmjpCm1PavnAYrVrka4URQpoga_8QRXLcE&_nc_ohc=A4KLqLnXFF0Q7kNvwF-T73_&_nc_oc=AdlqpGzxk_8gvKL9kpUQ-tDZ9jnnMQWE7_A0RH6jVweA12kGt2KWf-J9YhM33jI641M&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=eS1y3QvIknmR1VDU8ewOxA&oh=00_AfKll_8GdOAfkdfyyQo_b4UaEP3S5Ttuf89WPMVcql7z0Q&oe=6835EC5A" alt="Đoàn Mạnh Nghĩa" class="w-full h-full object-cover object-center"></div><div class="p-6"><h3 class="text-xl font-semibold text-gray-800 mb-1">Đoàn Mạnh Nghĩa</h3><p class="text-primary font-medium mb-3">Chủ nhiệm CLB</p><p class="text-gray-600 mb-4 text-sm">Sinh viên Kỳ 5 Ngành Kỹ Thuật Phần Mềm, chuyên AI.</p><div class="flex space-x-3 mt-4"><a href="https://www.facebook.com/nghia.doanmanh.39" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-facebook-fill text-lg"></i></a><a href="https://zalo.me/0393557017" title="Liên hệ qua Zalo" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-message-2-line text-lg"></i></a></div></div></div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden member-card"><div class="h-64 overflow-hidden"><img src="DAng.jpg" alt="Lương Hải Đăng"  class="w-full h-full object-cover object-center"></div><div class="p-6"><h3 class="text-xl font-semibold text-gray-800 mb-1">Lương Hải Đăng</h3><p class="text-primary font-medium mb-3">Phó chủ nhiệm</p><p class="text-gray-600 mb-4 text-sm">Sinh viên Kỳ 4 Ngành Kỹ Thuật Phần Mềm, chuyên Game Dev & UI/UX.</p><div class="flex space-x-3 mt-4"><a href="https://www.facebook.com/angluong.674637" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-facebook-fill text-lg"></i></a><a href="https://zalo.me/0987167414" title="Liên hệ qua Zalo" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-message-2-line text-lg"></i></a></div></div></div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden member-card"><div class="h-64 overflow-hidden"><img src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/481045902_122228392856025902_4086716949947282060_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEQOKEmpFYQwaotqKZvWJOvk2oudUInv8KTai51Qie_wl71YOhrSaxgddV64gV15mNF71-RnxQ5vU95TzxOhF-G&_nc_ohc=IfBUGMKC6cMQ7kNvwG7dByv&_nc_oc=AdnRPI_9s_F4RoVbQNNBx20siyhnBSA9Zt3fhR2TdJJJ_d_GsNX5bSqm5-Oyz_LmGMM&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=i4wGy0mSlE0wdE2fYmKW2Q&oh=00_AfL_SS0p8dXmh0S5t7zl5Z2rvlSUdFMXht-C9mdNLGNtAQ&oe=6835DEBD" alt="Vũ Văn Trường" class="w-full h-full object-cover object-center"></div><div class="p-6"><h3 class="text-xl font-semibold text-gray-800 mb-1">Vũ Văn Trường</h3><p class="text-primary font-medium mb-3">Cựu Chủ nhiệm</p><p class="text-gray-600 mb-4 text-sm">Sinh viên Kỳ 6 Ngành Kỹ Thuật Phần Mềm, chuyên Project Manager.</p><div class="flex space-x-3 mt-4"><a href="https://www.facebook.com/vvtruong27" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-facebook-fill text-lg"></i></a><a href="https://zalo.me/0969939132" title="Liên hệ qua Zalo" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-message-2-line text-lg"></i></a></div></div></div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden member-card"><div class="h-64 overflow-hidden"><img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.30808-6/481146322_122228393030025902_3733257363517922675_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGUNceFH7dr4eX5bVz0VNH6k8bEMw-5-niTxsQzD7n6eLfooKh_KUdu5WcPpPbmu3aRETsppAICooQMbKIYnfIx&_nc_ohc=N8RncHqYZu4Q7kNvwE1fpbT&_nc_oc=AdkYtyoAMN54yiN5FpXvOWniLlUZVygTwXaf1OR0py4B4bWno26XMjWdYTfl_1JgAKc&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=PJvLXN8_MZ_e6UiZfnPBeg&oh=00_AfLMnmDNRLiBShUeL04Gg6ecXUwz9rEZKJf7pRpSyP30UA&oe=68360033" alt="Bùi Thành Vương" class="w-full h-full object-cover object-center"></div><div class="p-6"><h3 class="text-xl font-semibold text-gray-800 mb-1">Bùi Thành Vương</h3><p class="text-primary font-medium mb-3">Cựu Trưởng ban Truyền thông</p><p class="text-gray-600 mb-4 text-sm">Sinh viên Kỳ 6 Ngành Marketing, chuyên Content & Marketing.</p><div class="flex space-x-3 mt-4"><a href="https://www.facebook.com/coii.vuong.10" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-facebook-fill text-lg"></i></a><a href="https://zalo.me/0972802155" title="Liên hệ qua Zalo" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary"><i class="ri-message-2-line text-lg"></i></a></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white main-page-section scroll-animate">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Liên Hệ & Tham Gia</h2><p class="text-gray-600 mt-6 max-w-3xl mx-auto">Bạn muốn trở thành thành viên của BIT hoặc hợp tác cùng chúng tôi? Hãy liên hệ ngay!</p></div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2"><form id="contactForm" class="bg-white rounded-lg shadow-xl p-6 border border-gray-100"><div class="mb-6"><label for="name" class="block text-gray-700 font-medium mb-2">Họ và tên</label><input type="text" id="name" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:border-primary text-sm" placeholder="Họ và tên"></div><div class="mb-6"><label for="email" class="block text-gray-700 font-medium mb-2">Email</label><input type="email" id="email" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:border-primary text-sm" placeholder="Địa chỉ email"></div><div class="mb-6"><label for="phone" class="block text-gray-700 font-medium mb-2">Số điện thoại</label><input type="tel" id="phone" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:border-primary text-sm" placeholder="Số điện thoại (tùy chọn)"></div><div class="mb-6"><label for="message" class="block text-gray-700 font-medium mb-2">Lời nhắn</label><textarea id="message" rows="4" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:border-primary text-sm" placeholder="Nội dung lời nhắn"></textarea></div><div class="mb-6 flex items-start"><input type="checkbox" id="agree" class="custom-checkbox mr-3 mt-1"><label for="agree" class="text-gray-600 text-sm">Tôi đồng ý với <a href="#" class="text-primary hover:underline">điều khoản</a> và <a href="#" class="text-primary hover:underline">chính sách bảo mật</a> của BIT</label></div><button type="submit" class="w-full bg-primary text-white hover:bg-blue-600 px-6 py-3 rounded-button font-medium transition-colors whitespace-nowrap">Gửi thông tin</button></form></div>
+                    <div class="md:w-1/2"><div class="bg-white rounded-lg shadow-xl p-6 border border-gray-100 h-full"><h3 class="text-2xl font-semibold text-gray-800 mb-6">Thông Tin Liên Hệ</h3><div class="flex items-start mb-6"><div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full text-primary mr-4 flex-shrink-0"><i class="ri-map-pin-line text-xl"></i></div><div><h4 class="font-medium text-gray-800 mb-1">Địa chỉ</h4><p class="text-gray-600 text-sm">Tòa D, Cao Đẳng Anh Quốc BTEC, 13 Trịnh Văn Bộ, P. Canh, Nam Từ Liêm, Hà Nội</p></div></div><div class="flex items-start mb-6"><div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full text-primary mr-4 flex-shrink-0"><i class="ri-mail-line text-xl"></i></div><div><h4 class="font-medium text-gray-800 mb-1">Email</h4><p class="text-gray-600 text-sm">bit.btecfpt@gmail.com</p></div></div><div class="flex items-start mb-8"><div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full text-primary mr-4 flex-shrink-0"><i class="ri-time-line text-xl"></i></div><div><h4 class="font-medium text-gray-800 mb-1">Giờ làm việc</h4><p class="text-gray-600 text-sm">Thứ 2 - Thứ 6: 9:00 - 17:00<br>Thứ 7: 9:00 - 12:00</p></div></div><h4 class="font-medium text-gray-800 mb-3">Kết nối với chúng tôi</h4><div class="flex space-x-3"><a href="https://www.facebook.com/profile.php?id=61550777080606" class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full text-primary hover:bg-primary hover:text-white transition-colors"><i class="ri-facebook-fill text-lg"></i></a><a href="https://discord.gg/EpvDcuDe" class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full text-primary hover:bg-primary hover:text-white transition-colors" target="_blank"><i class="ri-discord-fill text-lg"></i></a></div></div></div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- END main-content-wrapper -->
+
+    <!-- "All Events" Page Content - Hidden by default -->
+    <div id="all-events-page" class="hidden py-16 md:py-24 bg-white"> <!-- Removed scroll-animate from parent, apply to children -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tất Cả Sự Kiện Của BIT Club</h2><p class="text-gray-600 mt-6 max-w-3xl mx-auto">Khám phá tất cả các sự kiện đã, đang và sẽ diễn ra của Câu lạc bộ Công nghệ Thông tin BIT. Nơi kiến thức, đam mê và cơ hội gặp gỡ!</p></div>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 md:mb-16"><button class="filter-button active" data-filter="all">Tất cả</button><button class="filter-button" data-filter="upcoming">Sắp diễn ra</button><button class="filter-button" data-filter="ongoing">Đang diễn ra</button><button class="filter-button" data-filter="past">Đã diễn ra</button></div>
+            
+            <div id="all-events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1: Upcoming -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="upcoming">
+                    <div class="h-48 overflow-hidden"><img src="https://readdy.ai/api/search-image?query=Vietnamese%2520tech%2520workshop%252C%2520interactive%2520coding%2520session%252C%2520students%2520with%2520laptops%252C%2520blue%2520themed%2520classroom%252C%2520modern%2520learning%2520environment%252C%2520professional%2520educational%2520photo&width=400&height=250&seq=event1&orientation=landscape" alt="Workshop AI" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-primary mb-2"><i class="ri-calendar-line text-xl mr-2"></i><span class="font-medium">21/08/2025</span><span class="ml-auto bg-yellow-400 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Sắp diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Workshop "Startup Talk with CEOs"</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Tiếp cận góc nhìn thực tiễn về mô hình kinh doanh, vận hành doanh nghiệp trẻ và lắng nghe câu chuyện từ các CEO hàng đầu.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-map-pin-line text-xl mr-2"></i><span class="text-sm">Hội trường D, BTEC</span></div>
+                        <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm">Đăng ký ngay</a>
+                    </div>
+                </div>
+                <!-- Event 2: Upcoming -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="upcoming">
+                    <div class="h-48 overflow-hidden"><img src="https://readdy.ai/api/search-image?query=Vietnamese%2520hackathon%2520event%252C%2520teams%2520working%2520together%252C%2520collaborative%2520coding%252C%2520blue%2520lighting%252C%2520modern%2520co-working%2520space%252C%2520energetic%2520atmosphere%252C%2520professional%2520event%2520photo&width=400&height=250&seq=event2&orientation=landscape" alt="Hackathon 2025" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-primary mb-2"><i class="ri-calendar-line text-xl mr-2"></i><span class="font-medium">10/09 - 12/09/2025</span><span class="ml-auto bg-yellow-400 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Sắp diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">HACK <CX> TOGETHER 2025</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Ứng dụng AI trong ngân hàng, nhận sự hướng dẫn từ chuyên gia fintech và trình bày sản phẩm trước hội thảo lớn.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-map-pin-line text-xl mr-2"></i><span class="text-sm">Đại học Bách khoa Hà Nội</span></div>
+                        <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm">Đăng ký ngay</a>
+                    </div>
+                </div>
+                 <!-- Event 3: Upcoming -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="upcoming">
+                    <div class="h-48 overflow-hidden"><img src="https://royalschool.edu.vn/vnt_upload/news/10_2022/2.jpg"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-primary mb-2"><i class="ri-calendar-line text-xl mr-2"></i><span class="font-medium">05/06/2025</span><span class="ml-auto bg-yellow-400 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Sắp diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Workshop Định hướng tương lai trong kỷ nguyên AI</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Gặp gỡ, trò chuyện thân mật cùng Shark và chuyên gia,Giải mã cách “bứt tốc” sự nghiệp thời AI</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-map-pin-line text-xl mr-2"></i><span class="text-sm">Hội Trường, BTEC FPT</span></div>
+                        <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm">Đăng ký ngay</a>
+                    </div>
+                </div>
+
+                <!-- Event 4: Ongoing -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="ongoing">
+                    <div class="h-48 overflow-hidden"><img src="https://ameta.vn/storage/services/page-speed-core-web-vitals-optimization-service.jpg" alt="Ongoing Project" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-primary mb-2"><i class="ri-loader-4-line text-xl mr-2 animate-spin"></i><span class="font-medium">01/07 - 30/09/2025</span><span class="ml-auto bg-green-400 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đang diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Dự Án "Tech Sandbox" Mùa 3</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Các nhóm sinh viên phát triển dự án thực tế dưới sự hướng dẫn của mentor. Buổi demo giữa kỳ sắp diễn ra.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-community-line text-xl mr-2"></i><span class="text-sm">Không gian làm việc chung BIT</span></div>
+                        <a href="#" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm">Tìm Hiểu Thêm</a>
+                    </div>
+                </div>
+                <!-- Event 5: Ongoing -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="ongoing">
+                    <div class="h-48 overflow-hidden"><img src="https://images.squarespace-cdn.com/content/v1/5e7890d72004b1109cb1e677/1684858490926-JSH36VTPQV0BUP405JTI/Digital_Humans_Digital_Impact_9.png" alt="Data Science Study Group" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-primary mb-2"><i class="ri-loader-4-line text-xl mr-2 animate-spin"></i><span class="font-medium">Hàng tuần, Thứ 5</span><span class="ml-auto bg-green-400 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đang diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Nhóm Học Làm Game</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Cùng nhau học tập, thảo luận và thực hành các chủ đề về Khoa học Dữ liệu. Mở cửa cho tất cả các thành viên.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-vidicon-line text-xl mr-2"></i><span class="text-sm">Online qua Discord BIT</span></div>
+                        <a href="https://discord.gg/EpvDcuDe" class="inline-block bg-primary text-white hover:bg-blue-600 px-6 py-2 rounded-button font-medium transition-colors whitespace-nowrap text-sm">Tham gia Discord</a>
+                    </div>
+                </div>
+
+                <!-- Event 6: Past -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="past">
+                    <div class="h-48 overflow-hidden"><img src="https://i.ytimg.com/vi/Uy4_91AEaN0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDXj6pz4S7vHuTqE4IQj2jX-cR7Yg" alt="Workshop Tổng Kết" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-2"><i class="ri-calendar-check-line text-xl mr-2"></i><span class="font-medium">15/06/2025</span><span class="ml-auto bg-gray-300 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đã diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Workshop "Kỹ Năng Mềm Cho IT Gen Z"</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Buổi chia sẻ tổng kết các kỹ năng quan trọng giúp sinh viên IT tự tin hơn trong môi trường doanh nghiệp.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-map-pin-line text-xl mr-2"></i><span class="text-sm">Hội trường A, BTEC</span></div>
+                        <span class="inline-block bg-gray-200 text-gray-700 px-6 py-2 rounded-button font-medium text-sm">Xem lại</span>
+                    </div>
+                </div>
+                <!-- Event 7: Past -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="past">
+                    <div class="h-48 overflow-hidden"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR_dgtiSciFeKLsjZGOJedDQXljvt0eZ9q4xs2UCaz63Sa6Co_4" alt="Game Dev Showcase" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-2"><i class="ri-calendar-check-line text-xl mr-2"></i><span class="font-medium">20/05/2025</span><span class="ml-auto bg-gray-300 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đã diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Buổi Trình Bày Game Project</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Các nhóm sinh viên ngành Game Dev trình bày sản phẩm game của mình sau một học kỳ làm việc.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-gamepad-line text-xl mr-2"></i><span class="text-sm">Sảnh Tòa D, BTEC</span></div>
+                        <span class="inline-block bg-gray-200 text-gray-700 px-6 py-2 rounded-button font-medium text-sm">Xem highlights</span>
+                    </div>
+                </div>
+                 <!-- Event 8: Past -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="past">
+                    <div class="h-48 overflow-hidden"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRD9i7fDzTCm91er7SH_LMwrc04-uFVn6950hzSWGzNnI3bwQvc" alt="AI Tech Talk" class="w-full h-full object-cover"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-2"><i class="ri-calendar-check-line text-xl mr-2"></i><span class="font-medium">10/04/2025</span><span class="ml-auto bg-gray-300 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đã diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Tech Talk: Tương Lai Của AI</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Chuyên gia AI chia sẻ về những xu hướng mới nhất và tiềm năng của Trí Tuệ Nhân Tạo trong tương lai.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-slideshow-3-line text-xl mr-2"></i><span class="text-sm">Hội trường B, BTEC</span></div>
+                        <span class="inline-block bg-gray-200 text-gray-700 px-6 py-2 rounded-button font-medium text-sm">Xem slide</span>
+                    </div>
+                </div>
+                 
+                <!-- Event 9: Past -->
+                <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden event-card scroll-animate" data-event-type="past">
+                    <div class="h-48 overflow-hidden"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjmskU1k4qnzgx_FJaU4UUpDs7q-9C-UE-10BhO_ovuSS1Yic_XKo2BCUqDg8MLNSJK48&usqp=CAU"></div>
+                    <div class="p-6">
+                        <div class="flex items-center text-gray-500 mb-2"><i class="ri-calendar-check-line text-xl mr-2"></i><span class="font-medium">25/03/2025</span><span class="ml-auto bg-gray-300 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">Đã diễn ra</span></div>
+                        <h3 class="text-xl font-semibold text-gray-800 my-3">Cuộc Thi Lập Trình Cho Người Mới</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Sân chơi thử sức dành cho các bạn sinh viên mới bắt đầu với lập trình, giải các bài toán cơ bản.</p>
+                        <div class="flex items-center text-gray-600 mb-5"><i class="ri-code-s-slash-line text-xl mr-2"></i><span class="text-sm">Phòng Lab 1 & 2, BTEC</span></div>
+                        <span class="inline-block bg-gray-200 text-gray-700 px-6 py-2 rounded-button font-medium text-sm">Xem kết quả</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary text-white py-12 footer-patterned">
+    <div class="container mx-auto px-4">
+        <!-- Sử dụng layout 3 cột để cân đối hơn -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
+
+            <!-- Cột 1: Thông tin chung và Logos -->
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <a href="#" class="nav-link-home">
+                        <img src="Logo BIT.png" alt="BIT Club Logo" class="h-12">
+                    </a>
+                    <!-- Logo thứ hai bạn muốn thêm -->
+                    <a href="LINK_CHO_LOGO_BTEC_HOAC_TRUONG_NEU_CO" class="flex items-center">
+                        <!-- Ví dụ: Thay thế bằng logo BTEC hoặc logo khác bạn muốn -->
+                        <img src="2020-Btec.png" alt="BTEC Logo" class="h-12">
+                    </a>
+                </div>
+                <p class="text-white text-opacity-80 mb-6 text-sm leading-relaxed">
+                    Câu lạc bộ Công nghệ thông tin BIT - Nơi kết nối đam mê và sáng tạo, mang công nghệ đến gần hơn với cộng đồng sinh viên.
+                </p>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/profile.php?id=61550777080606" title="Facebook BIT Club" target="_blank" class="w-9 h-9 flex items-center justify-center text-white text-opacity-80 hover:text-opacity-100 hover:bg-white hover:bg-opacity-10 rounded-full transition-colors">
+                        <i class="ri-facebook-fill text-lg"></i>
+                    </a>
+                    <a href="https://discord.gg/EpvDcuDe" title="Discord BIT Club" target="_blank" class="w-9 h-9 flex items-center justify-center text-white text-opacity-80 hover:text-opacity-100 hover:bg-white hover:bg-opacity-10 rounded-full transition-colors">
+                        <i class="ri-discord-fill text-lg"></i>
+                    </a>
+                    <!-- Thêm các mạng xã hội khác nếu cần -->
+                </div>
+            </div>
+
+            <!-- Cột 2: Liên kết nhanh -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Liên kết nhanh</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline nav-link">Giới thiệu CLB</a></li>
+                    <li><a href="#achievements" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline nav-link">Thành tựu nổi bật</a></li>
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline nav-link event-trigger">Sự kiện CLB</a></li>
+                    <li><a href="#members" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline nav-link">Thành viên</a></li>
+                    <li><a href="#contact" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline nav-link">Liên hệ & Tham gia</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Hoạt động và Copyright -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Hoạt động chính</h4>
+                <ul class="space-y-3">
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline event-trigger">Workshop & Seminar</a></li>
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline event-trigger">Các cuộc thi Hackathon</a></li>
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline event-trigger">Dự án cộng đồng</a></li>
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline event-trigger">Buổi chia sẻ kinh nghiệm</a></li>
+                    <li><a href="#events" class="text-white text-opacity-80 hover:text-opacity-100 hover:underline event-trigger">Chương trình tuyển dụng</a></li>
+                    
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-[100] hidden">
+        <div class="mobile-menu-content bg-white h-full w-72 max-w-[calc(100%-40px)] shadow-xl transform transition-transform duration-300 ease-in-out -translate-x-full"><div class="p-5 flex justify-between items-center border-b border-gray-200"><div class="flex items-center"><div class="lantern w-8 h-8 mr-2"><img src="https://readdy.ai/api/search-image?query=Traditional%20Vietnamese%20lantern%2C%20red%20and%20gold%20colors%2C%20festive%20decoration%2C%20detailed%20ornaments%2C%20transparent%20background%2C%20vector%20style%20illustration&width=200&height=200&seq=lantern1&orientation=squarish" alt="Lồng đèn"></div><a href="#" class="text-2xl font-['Pacifico'] text-primary nav-link-home">BIT</a></div><button id="close-menu" class="w-9 h-9 flex items-center justify-center text-gray-600 hover:text-primary rounded-full hover:bg-gray-100"><i class="ri-close-line ri-xl"></i></button></div><nav class="p-5"><ul class="space-y-2"><li><a href="#about" class="block py-2.5 px-3 text-gray-700 hover:text-primary font-medium hover:bg-secondary rounded-md transition-colors nav-link">Giới thiệu</a></li><li><a href="#achievements" class="block py-2.5 px-3 text-gray-700 hover:text-primary font-medium hover:bg-secondary rounded-md transition-colors nav-link">Thành tựu</a></li><li><a href="#events" class="block py-2.5 px-3 text-gray-700 hover:text-primary font-medium hover:bg-secondary rounded-md transition-colors nav-link event-trigger">Sự kiện</a></li><li><a href="#members" class="block py-2.5 px-3 text-gray-700 hover:text-primary font-medium hover:bg-secondary rounded-md transition-colors nav-link">Thành viên</a></li><li><a href="#contact" class="block py-2.5 px-3 text-gray-700 hover:text-primary font-medium hover:bg-secondary rounded-md transition-colors nav-link">Liên hệ</a></li></ul></nav></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

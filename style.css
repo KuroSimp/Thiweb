@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.025' fill-rule='evenodd'%3E%3Cpath d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Timeline Styles (Màu xanh dương từ config) --- */
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #6a9ed8;
+    border: 3px solid #f9fafb; /* Match section background (bg-gray-50) */
+    z-index: 1;
+}
+
+/* --- Card Styles (Màu xanh dương từ config) --- */
+.member-card, .event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.member-card {
+    border: 1px solid transparent;
+}
+.event-card {
+     border-width: 1px; /* Mặc định có border xám từ Tailwind */
+}
+.member-card:hover, .event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(106, 158, 216, 0.25); /* Shadow màu xanh dương */
+    border-color: #6a9ed8; /* Border màu xanh dương */
+}
+
+/* --- Form Input Focus Styles (Màu xanh dương từ config) --- */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #6a9ed8 !important;
+    box-shadow: 0 0 0 2px rgba(106, 158, 216, 0.3) !important;
+}
+.custom-checkbox {
+    appearance: none; -webkit-appearance: none; width: 20px; height: 20px;
+    border: 2px solid #6a9ed8; border-radius: 4px; outline: none; cursor: pointer;
+    position: relative; flex-shrink: 0;
+}
+.custom-checkbox:checked {
+    background-color: #6a9ed8; border-color: #6a9ed8;
+}
+.custom-checkbox:checked::after {
+    content: '\2714'; font-size: 14px; color: white; position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+
+/* --- Decorated Underline (Màu xanh dương từ config) --- */
+.decorated-underline {
+    width: 70px; height: 3px; background-color: #6a9ed8;
+    margin: 8px auto 0; position: relative; border-radius: 2px;
+}
+.decorated-underline::before, .decorated-underline::after {
+    content: ''; position: absolute; width: 8px; height: 8px;
+    background-color: #6a9ed8; border-radius: 50%; top: 50%;
+    transform: translateY(-50%);
+}
+.decorated-underline::before { left: -18px; }
+.decorated-underline::after { right: -18px; }
+
+/* --- Footer Pattern --- */
+.footer-patterned {
+    background-image:
+        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05)),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05));
+    background-size: 16px 16px;
+}
+
+/* --- Lantern Animation --- */
+.lantern {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+@keyframes swing {
+  0% { transform: rotate(0deg); } 25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); } 75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* --- "All Events" Page Filter Buttons --- */
+.filter-button {
+    border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+    padding: 0.5rem 1rem;
+    border-radius: 8px; /* Tailwind rounded-lg or your custom rounded-button */
+    color: #374151; /* Tailwind gray-700 */
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+.filter-button:hover {
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+}
+.filter-button.active {
+    background-color: #6a9ed8; /* primary color */
+    color: white;
+    border-color: #6a9ed8; /* primary color */
+}
+
+/* --- Scroll Animation Styles --- */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly lower */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for child elements if needed (Not strictly necessary for event cards, but good to keep) */
+.scroll-animate.is-visible .animate-child-1 { transition-delay: 0.1s; }
+.scroll-animate.is-visible .animate-child-2 { transition-delay: 0.2s; }
+.scroll-animate.is-visible .animate-child-3 { transition-delay: 0.3s; }
+
+
+/* Các class hỗ trợ (nếu chưa có từ Tailwind hoặc bạn muốn ghi đè) */
+.relative {
+    position: relative;
+}
